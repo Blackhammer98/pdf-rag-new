@@ -1,4 +1,5 @@
 "use client" ;
+import ChatComponent from "./components/chat-window";
 import FileUploadComponent from "./components/file-upload";
 
 export default function Home() {
@@ -10,7 +11,9 @@ export default function Home() {
         
         
        </div>
-       <div className=" min-h-screen w-[50vw] border-l-2 pl-4 flex items-center justify-center text-4xl">2</div>
+       <div className=" min-h-screen w-[50vw] border-l-2 pl-4  flex items-center text-3xl ">
+        <ChatComponent/>
+       </div>
     </div>
   );
 }
