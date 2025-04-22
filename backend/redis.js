@@ -2,9 +2,9 @@
 import Redis from 'ioredis';
 
 const client = new Redis({
-  host: 'redis-18443.c301.ap-south-1-1.ec2.redns.redis-cloud.com', // Your cloud host
+  host: '**********************', // Your cloud host
   port: 18443,             // Your cloud port
-  password: 'esrpqZNepEfWpBHYsG0MN5yjHMieWTO9', // Your password
+  password: '***************************', // Your password
   username: 'default',     // Optional, only if required by your provider
   maxRetriesPerRequest: null
 });

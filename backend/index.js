@@ -7,7 +7,7 @@ import { CohereEmbeddings } from "@langchain/cohere";
 import { QdrantVectorStore } from "@langchain/qdrant";
 import { GoogleGenAI } from "@google/genai"
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyC8722U2IDm6sIdnsnHOdmO8XwOZBAVrFI" });
+const ai = new GoogleGenAI({ apiKey: "****************************" });
 
 const myQueue = new Queue('file-upload-queue', {
     connection : client
@@ -59,7 +59,7 @@ app.get("/chat" , async (req ,res) => {
 
   const embeddings = new CohereEmbeddings({
       model:"embed-english-v3.0",
-      apiKey : "hWNBBBs6mfnvnavaD2PdFKD5n0NPoRzQ8LDZUYNm"
+      apiKey : "*****************************"
   
     }); 
 
@@ -67,9 +67,9 @@ app.get("/chat" , async (req ,res) => {
    
     embeddings,
     {
-    url: "https://64646006-d328-432e-bfd6-270a8cbab8ac.europe-west3-0.gcp.cloud.qdrant.io:6333",
+    url: "**************************",
     collectionName: "langchainjs-testing",
-    apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.dKesVuQ_3Hyz2R0fsc5vmOYiqkR7giU2ctpVl4AJD0k",
+    apiKey: "**********************************",
   });
 
 

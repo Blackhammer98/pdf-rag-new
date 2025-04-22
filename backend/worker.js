@@ -25,7 +25,7 @@ const worker = new Worker("file-upload-queue",
 
   const embeddings = new CohereEmbeddings({
     model:"embed-english-v3.0",
-    apiKey : "hWNBBBs6mfnvnavaD2PdFKD5n0NPoRzQ8LDZUYNm"
+    apiKey : "************"
 
   });
 
@@ -33,9 +33,9 @@ const worker = new Worker("file-upload-queue",
    
     embeddings,
     {
-    url: "https://64646006-d328-432e-bfd6-270a8cbab8ac.europe-west3-0.gcp.cloud.qdrant.io:6333",
+    url: "***************************",
     collectionName: "langchainjs-testing",
-    apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.dKesVuQ_3Hyz2R0fsc5vmOYiqkR7giU2ctpVl4AJD0k",
+    apiKey: "*****************",
   });
   await vectorStore.addDocuments(docs);
   console.log("All docs are added to vector store")
