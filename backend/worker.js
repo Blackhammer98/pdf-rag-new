@@ -25,7 +25,7 @@ const worker = new Worker("file-upload-queue",
 
   const embeddings = new CohereEmbeddings({
     model:"embed-english-v3.0",
-    apiKey : "************"
+    apiKey : ""
 
   });
 
@@ -33,9 +33,9 @@ const worker = new Worker("file-upload-queue",
    
     embeddings,
     {
-    url: "***************************",
+    url: "",
     collectionName: "langchainjs-testing",
-    apiKey: "*****************",
+    apiKey: "",
   });
   await vectorStore.addDocuments(docs);
   console.log("All docs are added to vector store")

@@ -2,9 +2,9 @@
 import Redis from 'ioredis';
 
 const client = new Redis({
-  host: '**********************', // Your cloud host
+  host: '', // Your cloud host
   port: 18443,             // Your cloud port
-  password: '***************************', // Your password
+  password: '', // Your password
   username: 'default',     // Optional, only if required by your provider
   maxRetriesPerRequest: null
 });

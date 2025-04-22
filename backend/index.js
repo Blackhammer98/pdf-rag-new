@@ -7,7 +7,7 @@ import { CohereEmbeddings } from "@langchain/cohere";
 import { QdrantVectorStore } from "@langchain/qdrant";
 import { GoogleGenAI } from "@google/genai"
 
-const ai = new GoogleGenAI({ apiKey: "****************************" });
+const ai = new GoogleGenAI({ apiKey: "" });
 
 const myQueue = new Queue('file-upload-queue', {
     connection : client
@@ -59,7 +59,7 @@ app.get("/chat" , async (req ,res) => {
 
   const embeddings = new CohereEmbeddings({
       model:"embed-english-v3.0",
-      apiKey : "*****************************"
+      apiKey : ""
   
     }); 
 
@@ -67,9 +67,9 @@ app.get("/chat" , async (req ,res) => {
    
     embeddings,
     {
-    url: "**************************",
+    url: "",
     collectionName: "langchainjs-testing",
-    apiKey: "**********************************",
+    apiKey: "",
   });
 
 
@@ -102,10 +102,10 @@ app.get("/chat" , async (req ,res) => {
        
 
     })
-  } catch(err) {
-   
+  }catch(err) {
+    console.error('Error during vector store initialization or retrieval:', err);
     console.error('Gemini error:', err);
-
+    console.error('Full error object:', JSON.stringify(err, null, 2)); // Log the entire error object
     return res.status(500).json({ error: err.message });
   }
 } )
